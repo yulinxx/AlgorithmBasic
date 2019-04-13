@@ -15,7 +15,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="归并排序.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="冒泡排序.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="哈希表.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="哈希表算法.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="堆排序.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="希尔排序.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="快速排序.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="插入排序.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="选择排序.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="桶排序.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="基数排序.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

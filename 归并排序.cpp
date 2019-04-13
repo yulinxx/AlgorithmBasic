@@ -1,5 +1,12 @@
 // 来源: https://blog.csdn.net/a130737/article/details/38228369
 
+//归并排序（Merge Sort）
+//
+//基本思想：
+//归并（Merge）排序法是将两个（或两个以上）有序表合并成一个新的有序表，
+//即把待排序序列分为若干个子序列，每个子序列是有序的。
+//然后再把有序子序列合并为整体有序序列。
+//
 
 /* Merge sort in C++ */
 #include <cstdio>
@@ -44,11 +51,14 @@ void MergeSort(int* A, int n)
 	R = new int[n - mid];
 
 	for (i = 0; i < mid; i++) L[i] = A[i]; // creating left subarray
+
 	for (i = mid; i < n; i++) R[i - mid] = A[i]; // creating right subarray
 
 	MergeSort(L, mid);  // sorting the left subarray
 	MergeSort(R, n - mid);  // sorting the right subarray
+
 	Merge(A, L, mid, R, n - mid);  // Merging L and R into A as sorted list.
+
 	// the delete operations is very important
 	delete[] R;
 	delete[] L;
