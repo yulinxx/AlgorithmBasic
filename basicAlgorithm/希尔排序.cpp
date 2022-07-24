@@ -1,28 +1,28 @@
 /**
- * Ï£¶ûÅÅÐò£ºC ÓïÑÔ
+ * å¸Œå°”æŽ’åºï¼šC è¯­è¨€
  *
  * @author skywang
  * @date 2014/03/11
  */
 
-//²åÈëÅÅÐò¡ªÏ£¶ûÅÅÐò£¨Shell`s Sort£©
-// Ï£¶ûÅÅÐòÊÇ1959 ÄêÓÉD.L.Shell Ìá³öÀ´µÄ£¬Ïà¶ÔÖ±½ÓÅÅÐòÓÐ½Ï´óµÄ¸Ä½ø¡£Ï£¶ûÅÅÐòÓÖ½ÐËõÐ¡ÔöÁ¿ÅÅÐò
+//æ’å…¥æŽ’åºâ€”å¸Œå°”æŽ’åºï¼ˆShell`s Sortï¼‰
+// å¸Œå°”æŽ’åºæ˜¯1959 å¹´ç”±D.L.Shell æå‡ºæ¥çš„ï¼Œç›¸å¯¹ç›´æŽ¥æŽ’åºæœ‰è¾ƒå¤§çš„æ”¹è¿›ã€‚å¸Œå°”æŽ’åºåˆå«ç¼©å°å¢žé‡æŽ’åº
 
-//»ù±¾Ë¼Ïë£º
-// ÏÈ½«Õû¸ö´ýÅÅÐòµÄ¼ÇÂ¼ÐòÁÐ·Ö¸î³ÉÎªÈô¸É×ÓÐòÁÐ·Ö±ð½øÐÐÖ±½Ó²åÈëÅÅÐò£¬
-// ´ýÕû¸öÐòÁÐÖÐµÄ¼ÇÂ¼¡°»ù±¾ÓÐÐò¡±Ê±£¬ÔÙ¶ÔÈ«Ìå¼ÇÂ¼½øÐÐÒÀ´ÎÖ±½Ó²åÈëÅÅÐò¡£
+//åŸºæœ¬æ€æƒ³ï¼š
+// å…ˆå°†æ•´ä¸ªå¾…æŽ’åºçš„è®°å½•åºåˆ—åˆ†å‰²æˆä¸ºè‹¥å¹²å­åºåˆ—åˆ†åˆ«è¿›è¡Œç›´æŽ¥æ’å…¥æŽ’åºï¼Œ
+// å¾…æ•´ä¸ªåºåˆ—ä¸­çš„è®°å½•â€œåŸºæœ¬æœ‰åºâ€æ—¶ï¼Œå†å¯¹å…¨ä½“è®°å½•è¿›è¡Œä¾æ¬¡ç›´æŽ¥æ’å…¥æŽ’åºã€‚
 
 #include <stdio.h>
 
- // Êý×é³¤¶È
+ // æ•°ç»„é•¿åº¦
 #define LENGTH(array) ( (sizeof(array)) / (sizeof(array[0])) )
 
 /*
- * Ï£¶ûÅÅÐò
+ * å¸Œå°”æŽ’åº
  *
- * ²ÎÊýËµÃ÷£º
- *     a -- ´ýÅÅÐòµÄÊý×é
- *     n -- Êý×éµÄ³¤¶È
+ * å‚æ•°è¯´æ˜Žï¼š
+ *     a -- å¾…æŽ’åºçš„æ•°ç»„
+ *     n -- æ•°ç»„çš„é•¿åº¦
  */
  //int a[] = {80,30,60,40,20,10,50,70};
  //int ilen = LENGTH(a);
@@ -30,15 +30,15 @@ void shell_sort1(int a[], int n)
 {
 	int i, j, gap;
 
-	// gapÎª²½³¤£¬Ã¿´Î¼õÎªÔ­À´µÄÒ»°ë¡£
+	// gapä¸ºæ­¥é•¿ï¼Œæ¯æ¬¡å‡ä¸ºåŽŸæ¥çš„ä¸€åŠã€‚
 	for (gap = n / 2; gap > 0; gap /= 2)
 	{
-		// ¹²gap¸ö×é£¬¶ÔÃ¿Ò»×é¶¼Ö´ÐÐÖ±½Ó²åÈëÅÅÐò
+		// å…±gapä¸ªç»„ï¼Œå¯¹æ¯ä¸€ç»„éƒ½æ‰§è¡Œç›´æŽ¥æ’å…¥æŽ’åº
 		for (i = 0; i < gap; i++)
 		{
 			for (j = i + gap; j < n; j += gap)
 			{
-				// Èç¹ûa[j] < a[j-gap]£¬ÔòÑ°ÕÒa[j]Î»ÖÃ£¬²¢½«ºóÃæÊý¾ÝµÄÎ»ÖÃ¶¼ºóÒÆ¡£
+				// å¦‚æžœa[j] < a[j-gap]ï¼Œåˆ™å¯»æ‰¾a[j]ä½ç½®ï¼Œå¹¶å°†åŽé¢æ•°æ®çš„ä½ç½®éƒ½åŽç§»ã€‚
 				if (a[j] < a[j - gap])
 				{
 					int tmp = a[j];
@@ -57,15 +57,15 @@ void shell_sort1(int a[], int n)
 }
 
 /*
- * ¶ÔÏ£¶ûÅÅÐòÖÐµÄµ¥¸ö×é½øÐÐÅÅÐò
+ * å¯¹å¸Œå°”æŽ’åºä¸­çš„å•ä¸ªç»„è¿›è¡ŒæŽ’åº
  *
- * ²ÎÊýËµÃ÷£º
- *     a -- ´ýÅÅÐòµÄÊý×é
- *     n -- Êý×é×ÜµÄ³¤¶È
- *     i -- ×éµÄÆðÊ¼Î»ÖÃ
- *     gap -- ×éµÄ²½³¤
+ * å‚æ•°è¯´æ˜Žï¼š
+ *     a -- å¾…æŽ’åºçš„æ•°ç»„
+ *     n -- æ•°ç»„æ€»çš„é•¿åº¦
+ *     i -- ç»„çš„èµ·å§‹ä½ç½®
+ *     gap -- ç»„çš„æ­¥é•¿
  *
- *  ×éÊÇ"´Ói¿ªÊ¼£¬½«Ïà¸ôgap³¤¶ÈµÄÊý¶¼È¡³ö"Ëù×é³ÉµÄ£¡
+ *  ç»„æ˜¯"ä»Žiå¼€å§‹ï¼Œå°†ç›¸éš”gapé•¿åº¦çš„æ•°éƒ½å–å‡º"æ‰€ç»„æˆçš„ï¼
  */
 void group_sort(int a[], int n, int i, int gap)
 {
@@ -73,7 +73,7 @@ void group_sort(int a[], int n, int i, int gap)
 
 	for (j = i + gap; j < n; j += gap)
 	{
-		// Èç¹ûa[j] < a[j-gap]£¬ÔòÑ°ÕÒa[j]Î»ÖÃ£¬²¢½«ºóÃæÊý¾ÝµÄÎ»ÖÃ¶¼ºóÒÆ¡£
+		// å¦‚æžœa[j] < a[j-gap]ï¼Œåˆ™å¯»æ‰¾a[j]ä½ç½®ï¼Œå¹¶å°†åŽé¢æ•°æ®çš„ä½ç½®éƒ½åŽç§»ã€‚
 		if (a[j] < a[j - gap])
 		{
 			int tmp = a[j];
@@ -89,20 +89,20 @@ void group_sort(int a[], int n, int i, int gap)
 }
 
 /*
- * Ï£¶ûÅÅÐò
+ * å¸Œå°”æŽ’åº
  *
- * ²ÎÊýËµÃ÷£º
- *     a -- ´ýÅÅÐòµÄÊý×é
- *     n -- Êý×éµÄ³¤¶È
+ * å‚æ•°è¯´æ˜Žï¼š
+ *     a -- å¾…æŽ’åºçš„æ•°ç»„
+ *     n -- æ•°ç»„çš„é•¿åº¦
  */
 void shell_sort2(int a[], int n)
 {
 	int i, gap;
 
-	// gapÎª²½³¤£¬Ã¿´Î¼õÎªÔ­À´µÄÒ»°ë¡£
+	// gapä¸ºæ­¥é•¿ï¼Œæ¯æ¬¡å‡ä¸ºåŽŸæ¥çš„ä¸€åŠã€‚
 	for (gap = n / 2; gap > 0; gap /= 2)
 	{
-		// ¹²gap¸ö×é£¬¶ÔÃ¿Ò»×é¶¼Ö´ÐÐÖ±½Ó²åÈëÅÅÐò
+		// å…±gapä¸ªç»„ï¼Œå¯¹æ¯ä¸€ç»„éƒ½æ‰§è¡Œç›´æŽ¥æ’å…¥æŽ’åº
 		for (i = 0; i < gap; i++)
 		{
 			group_sort(a, n, i, gap);
