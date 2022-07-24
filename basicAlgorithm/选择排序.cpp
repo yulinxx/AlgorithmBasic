@@ -43,10 +43,18 @@ void selectSort(int a[], int n) {
 		print(a, n, i);
 	}
 }
-int main() {
+
+
+////////////////////////////////////////////////////////
+int main() 
+{
+	printf("选择排序\n\n");
+	
 	int a[8] = { 3,1,5,7,2,4,9,6 };
 	cout << "初始值：";
-	for (int j = 0; j < 8; j++) {
+
+	for (int j = 0; j < 8; j++) 
+	{
 		cout << a[j] << "  ";
 	}
 	cout << endl << endl;

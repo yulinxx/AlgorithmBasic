@@ -40,8 +40,11 @@ void InsertSort(int a[], int n)
 
 }
 
+////////////////////////////////////////////////////////
 int main()
 {
+	printf("插入排序\n\n");
+	
 	int a[8] = { 3,1,5,7,2,4,9,6 };
 	InsertSort(a, 8);
 	print(a, 8, 8);

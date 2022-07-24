@@ -72,8 +72,11 @@ void radixsort(int* a, int n)
 }
 
 
+////////////////////////////////////////////////////////
 int main() 
 {
+	printf("基数排序\n\n");
+	
 	int arr[MAX];
 	int i, n;
 

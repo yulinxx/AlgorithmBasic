@@ -47,8 +47,11 @@ void quickSort(int a[], int nLeft, int nRight)
 	quickSort(a, i + 1, nRight);/*递归右边*/
 }
 
+
+////////////////////////////////////////////////////////
 int main()
 {
+	printf("快速排序\n\n");
 	int a[9] = { 8,2,6,12,1,9,5,5,10 };
 
 	int i;

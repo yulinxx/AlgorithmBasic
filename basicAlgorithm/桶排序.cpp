@@ -1,3 +1,11 @@
+/*
+ * @Author: xx xx@ubuntu.com
+ * @Date: 2022-07-24 22:50:20
+ * @LastEditors: xx xx@ubuntu.com
+ * @LastEditTime: 2022-07-24 23:09:41
+ * @FilePath: /AlgorithmBasic/basicAlgorithm/桶排序.cpp
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 
 //桶排序 / 基数排序(Radix Sort)
 
@@ -40,8 +48,11 @@ void BucketSort(int intArray[], int Count_intArray, int max)
 }
 
 
+////////////////////////////////////////////////////////
 int main()
 {
+	printf("桶排序\n\n");
+	
 	//void BucketSort(int intArray[], int Count_intArray, int max);
 
 	int intArray[10] = { 999,55,10,1,0,1,87,45,55,4 };

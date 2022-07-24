@@ -63,9 +63,11 @@ void MergeSort(int* A, int n)
 }
 
 
-
+////////////////////////////////////////////////////////
 int main() 
 {
+	printf("归并排序\n\n");
+	
 	/* Code to test the MergeSort function. */
 
 	int A[] = { 6,2,3,1,9,10,15,13,12,17 }; // creating an array of integers.

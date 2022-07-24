@@ -111,8 +111,11 @@ void shell_sort2(int a[], int n)
 }
 
 
+////////////////////////////////////////////////////////
 int main()
 {
+	printf("希尔排序\n\n");
+	
 	int i;
 	int a[] = { 80,30,60,40,20,10,50,70 };
 	int ilen = LENGTH(a);
