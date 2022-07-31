@@ -25,7 +25,7 @@ void quickSort(int* a, int nLeft, int nRight)
 		if (j > i)
 			a[i] = a[j]; // 将右侧比左侧小的值赋给左侧. a[i]已经赋值给temp,所以直接将a[j]赋值给a[i],赋值完之后a[j],有空位
 
-		while (i < j && a[i] <= temp) // 左侧指针往右走,直到找到比原始左侧值小的数
+		while (i < j && a[i] <= temp) // 左侧指针往右走,直到找到比原始左侧值大
 			i++;
 
 		if (i < j)
